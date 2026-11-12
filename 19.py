@@ -1,36 +1,18 @@
-nimi = "Pavel"
-punktisumma = 89
-puudumised = 1
-tood_esitatud = "jah"
+arv1 = int(input("Esimene arv: "))
+arv2 = int(input("Teine arv: "))
+arv3 = int(input("Kolmas arv: "))
 
-if punktisumma >= 90:
-    hinne = 5
-elif punktisumma >= 75:
-    hinne = 4
-elif punktisumma >= 50:
-    hinne = 3
-elif punktisumma >= 20:
-    hinne = 2
+# Kontrollin, kas esimene arv on suurim
+if arv1 >= arv2 and arv1 >= arv3:
+    suurim = arv1
+
+# Kontrollin, kas teine arv on suurim
+elif arv2 >= arv1 and arv2 >= arv3:
+    suurim = arv2
+
+# Kui kumbki eelnev tingimus ei kehti on suurim kolmas arv
 else:
-    hinne = 1
+    suurim = arv3
 
-print("Õpilane:", nimi)
-print("Hinne:", hinne)
-
-if puudumised > 10:
-    print("Hoiatus: liiga palju puudumisi.")
-else:
-    print("Puudumiste arv on lubatud.")
-
-if tood_esitatud == "jah":
-    print("Kõik tööd on esitatud.")
-else:
-    print("Kõik tööd ei ole esitatud.")
-
-if hinne >= 3 and puudumised <= 10 and tood_esitatud == "jah":
-    print("Aine on läbitud.")
-else:
-    print("Aine ei ole läbitud.")
-
-if hinne == 1 or hinne == 2:
-    print("Hinne on alla kolme.")
+# Väljastame suurima arvu
+print("Suurim arv on", suurim, ".")
